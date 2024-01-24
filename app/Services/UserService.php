@@ -17,7 +17,7 @@ class UserService extends BaseService
     public function createUser($request)
     {
         $user = $this->query()->firstOrCreate([
-            'email' => $request->email
+            'phone' => $request->phone
         ], $request->all());
         return $user;
     }
